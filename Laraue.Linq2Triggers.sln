@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers", "Laraue.Linq2Triggers\Laraue.Linq2Triggers.csproj", "{BA372AD5-6036-4F75-A753-C675C6E3668E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{877393BA-73E8-4473-886D-AA3C9445BE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.PostgreSql", "Laraue.Linq2Triggers.PostgreSql\Laraue.Linq2Triggers.PostgreSql.csproj", "{21CC59FF-B65A-4204-BE34-E3EBBAA5D2F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.PostgreSql.Tests", "tests\Laraue.Linq2Triggers.PostgreSql.Tests\Laraue.Linq2Triggers.PostgreSql.Tests.csproj", "{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,16 @@ Global
 		{BA372AD5-6036-4F75-A753-C675C6E3668E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA372AD5-6036-4F75-A753-C675C6E3668E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA372AD5-6036-4F75-A753-C675C6E3668E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CC59FF-B65A-4204-BE34-E3EBBAA5D2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CC59FF-B65A-4204-BE34-E3EBBAA5D2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CC59FF-B65A-4204-BE34-E3EBBAA5D2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CC59FF-B65A-4204-BE34-E3EBBAA5D2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 	EndGlobalSection
 EndGlobal

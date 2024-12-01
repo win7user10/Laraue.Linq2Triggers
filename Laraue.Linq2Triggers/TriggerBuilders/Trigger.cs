@@ -7,7 +7,7 @@ using Laraue.Linq2Triggers.TriggerBuilders.TableRefs;
 namespace Laraue.Linq2Triggers.TriggerBuilders
 {
     /// <inheritdoc />
-    public sealed class Trigger<TTriggerEntity, TTriggerEntityRefs> : ITrigger
+    public abstract class Trigger<TTriggerEntity, TTriggerEntityRefs> : ITrigger
         where TTriggerEntity : class
         where TTriggerEntityRefs : ITableRef<TTriggerEntity>
     {
