@@ -1,7 +1,8 @@
-﻿namespace Laraue.Linq2Triggers.PostgreSql.Tests
+﻿namespace Laraue.Linq2Triggers.Tests.DataAccess
 {
-    public class DestinationEntity
+    public class DestinationEntity : BaseEntity
     {
+        public EnumValue? EnumValue { get; set; }
         public decimal? DecimalValue { get; set; }
         public double? DoubleValue { get; set; }
         public int? IntValue { get; set; }

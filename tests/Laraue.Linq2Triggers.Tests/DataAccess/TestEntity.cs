@@ -1,4 +1,4 @@
-﻿namespace Laraue.Linq2Triggers.PostgreSql.Tests
+﻿namespace Laraue.Linq2Triggers.Tests.DataAccess
 {
     public class TestEntity
     {
@@ -18,8 +18,8 @@
 
         public char CharValue { get; set; }
         
-        public string StringValue { get; set; }
+        public string? StringValue { get; set; }
         
-        public UserRole EnumValue { get; set; }
+        public EnumValue EnumValue { get; set; }
     }
 }

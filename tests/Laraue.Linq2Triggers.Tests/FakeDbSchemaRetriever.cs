@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Laraue.Linq2Triggers.SqlGeneration;
 
-namespace Laraue.Linq2Triggers.PostgreSql.Tests;
+namespace Laraue.Linq2Triggers.Tests;
 
 public class FakeDbSchemaRetriever : IDbSchemaRetriever
 {

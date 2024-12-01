@@ -38,6 +38,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Laraue.Linq2Triggers.PostgreSql\Laraue.Linq2Triggers.PostgreSql.csproj" />
       <ProjectReference Include="..\..\Laraue.Linq2Triggers\Laraue.Linq2Triggers.csproj" />
+      <ProjectReference Include="..\Laraue.Linq2Triggers.Tests\Laraue.Linq2Triggers.Tests.csproj" />
     </ItemGroup>
 
 </Project>

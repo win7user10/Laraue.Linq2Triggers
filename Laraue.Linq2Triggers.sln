@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Postgr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.PostgreSql.Tests", "tests\Laraue.Linq2Triggers.PostgreSql.Tests\Laraue.Linq2Triggers.PostgreSql.Tests.csproj", "{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Tests", "tests\Laraue.Linq2Triggers.Tests\Laraue.Linq2Triggers.Tests.csproj", "{CFE69821-6E31-4DE4-844B-EAED92B949F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +28,13 @@ Global
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361} = {877393BA-73E8-4473-886D-AA3C9445BE64}
+		{CFE69821-6E31-4DE4-844B-EAED92B949F4} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 	EndGlobalSection
 EndGlobal
