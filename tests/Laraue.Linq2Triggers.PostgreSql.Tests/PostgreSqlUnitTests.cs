@@ -12,67 +12,95 @@ public class PostgreSqlUnitTests : BaseUnitTests, IMemberAssignmentTests
     public void EnumValue_ShouldTranslatesToSql_Always()
     {
         AssertSql(
+            MemberAssignmentExpressions.SetEnumValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"EnumValue\") SELECT NEW.\"EnumValue\";");
+    }
+
+    [Fact]
+    public void DecimalValue_ShouldTranslatesToSql_Always()
+    {
+        AssertSql(
             MemberAssignmentExpressions.AddDecimalValueExpression,
             "INSERT INTO \"DestinationEntity\" (\"DecimalValue\") SELECT NEW.\"DecimalValue\" + 3;");
     }
 
-    public void DecimalValue_ShouldTranslatesToSql_Always()
-    {
-        throw new NotImplementedException();
-    }
-
+    [Fact]
     public void Double_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SubDoubleValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"DoubleValue\") SELECT NEW.\"DoubleValue\" + 3;");
     }
 
-    public void DoubleSubtract_ShouldTranslatesToSql_Always()
-    {
-        throw new NotImplementedException();
-    }
-
+    [Fact]
     public void IntegerMultiply_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.MultiplyIntValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"IntValue\") SELECT NEW.\"IntValue\" * 2;");
     }
 
+    [Fact]
     public void BooleanValue_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetBooleanValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"BooleanValue\") SELECT NEW.\"BooleanValue\" IS FALSE;");
     }
 
+    [Fact]
     public void NewGuid_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetNewGuidValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"GuidValue\") SELECT gen_random_uuid();");
     }
 
+    [Fact]
     public void CharValue_ShouldTranslatesToSql_WhenItSetsAsReference()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetCharVariableExpression,
+            "INSERT INTO \"DestinationEntity\" (\"CharValue\") SELECT NEW.\"CharValue\";");
     }
 
+    [Fact]
     public void CharValue_ShouldTranslatesToSql_WhenItSetsAsValue()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetCharValueExpression,
+            "INSERT INTO \"DestinationEntity\" (\"CharValue\") SELECT 'a';");
     }
 
+    [Fact]
     public void DateTimeOffsetNow_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetDateTimeOffsetNowExpression,
+            "INSERT INTO \"DestinationEntity\" (\"DateTimeOffsetValue\") SELECT NOW();");
     }
 
+    [Fact]
     public void DateTimeOffsetUtcNow_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetDateTimeOffsetUtcNowExpression,
+            "INSERT INTO \"DestinationEntity\" (\"DateTimeOffsetValue\") SELECT CURRENT_TIMESTAMP;");
     }
 
+    [Fact]
     public void NewDateTime_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetNewDateTimeExpression,
+            "INSERT INTO \"DestinationEntity\" (\"DateTimeValue\") SELECT '0001-01-01';");
     }
 
+    [Fact]
     public void NewDateTimeOffset_ShouldTranslatesToSql_Always()
     {
-        throw new NotImplementedException();
+        AssertSql(
+            MemberAssignmentExpressions.SetNewDateTimeOffsetExpression,
+            "INSERT INTO \"DestinationEntity\" (\"DateTimeOffsetValue\") SELECT '0001-01-01';");
     }
 }

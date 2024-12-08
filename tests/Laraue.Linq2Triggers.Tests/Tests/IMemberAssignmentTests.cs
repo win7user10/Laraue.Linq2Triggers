@@ -5,7 +5,6 @@ public interface IMemberAssignmentTests
     void EnumValue_ShouldTranslatesToSql_Always();
     void DecimalValue_ShouldTranslatesToSql_Always();
     void Double_ShouldTranslatesToSql_Always();
-    void DoubleSubtract_ShouldTranslatesToSql_Always();
     void IntegerMultiply_ShouldTranslatesToSql_Always();
     void BooleanValue_ShouldTranslatesToSql_Always();
     void NewGuid_ShouldTranslatesToSql_Always();
