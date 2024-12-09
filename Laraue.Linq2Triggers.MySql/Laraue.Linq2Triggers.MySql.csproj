@@ -5,7 +5,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
-        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,9 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Laraue.Linq2Triggers.PostgreSql\Laraue.Linq2Triggers.PostgreSql.csproj" />
-      <ProjectReference Include="..\..\Laraue.Linq2Triggers\Laraue.Linq2Triggers.csproj" />
-      <ProjectReference Include="..\Laraue.Linq2Triggers.Tests\Laraue.Linq2Triggers.Tests.csproj" />
+      <ProjectReference Include="..\Laraue.Linq2Triggers\Laraue.Linq2Triggers.csproj" />
     </ItemGroup>
 
 </Project>

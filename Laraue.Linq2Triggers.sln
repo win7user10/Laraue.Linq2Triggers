@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Postgr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Tests", "tests\Laraue.Linq2Triggers.Tests\Laraue.Linq2Triggers.Tests.csproj", "{CFE69821-6E31-4DE4-844B-EAED92B949F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.MySql", "Laraue.Linq2Triggers.MySql\Laraue.Linq2Triggers.MySql.csproj", "{9421B751-BD64-44E0-91BC-AE6759473AF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.MySql.Tests", "tests\Laraue.Linq2Triggers.MySql.Tests\Laraue.Linq2Triggers.MySql.Tests.csproj", "{7DEB5427-9D48-4E07-88F6-E868CEC150A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +36,18 @@ Global
 		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFE69821-6E31-4DE4-844B-EAED92B949F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9421B751-BD64-44E0-91BC-AE6759473AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9421B751-BD64-44E0-91BC-AE6759473AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9421B751-BD64-44E0-91BC-AE6759473AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9421B751-BD64-44E0-91BC-AE6759473AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DEB5427-9D48-4E07-88F6-E868CEC150A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DEB5427-9D48-4E07-88F6-E868CEC150A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DEB5427-9D48-4E07-88F6-E868CEC150A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DEB5427-9D48-4E07-88F6-E868CEC150A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 		{CFE69821-6E31-4DE4-844B-EAED92B949F4} = {877393BA-73E8-4473-886D-AA3C9445BE64}
+		{7DEB5427-9D48-4E07-88F6-E868CEC150A5} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 	EndGlobalSection
 EndGlobal
