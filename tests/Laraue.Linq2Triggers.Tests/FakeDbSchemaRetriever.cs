@@ -22,12 +22,24 @@ public class FakeDbSchemaRetriever : IDbSchemaRetriever
 
     public PropertyInfo[] GetPrimaryKeyMembers(Type type)
     {
-        throw new NotImplementedException();
+        return type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            .Where(p => p.Name == "Id")
+            .ToArray();
     }
 
     public KeyInfo[] GetForeignKeyMembers(Type type, Type type2)
     {
-        throw new NotImplementedException();
+        var principalProperty = type2
+            .GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            .FirstOrDefault(p => p.Name == "Id");
+        
+        var foreignKeyProperty = type
+            .GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            .FirstOrDefault(p => p.Name == $"{type2.Name}Id");
+
+        return principalProperty == null || foreignKeyProperty == null
+            ? Array.Empty<KeyInfo>()
+            : new[] { new KeyInfo(principalProperty, foreignKeyProperty) };
     }
 
     public Type GetActualClrType(Type type, MemberInfo memberInfo)

@@ -14,4 +14,6 @@ public interface IMemberAssignmentTests
     void DateTimeOffsetUtcNow_ShouldTranslatesToSql_Always();
     void NewDateTime_ShouldTranslatesToSql_Always();
     void NewDateTimeOffset_ShouldTranslatesToSql_Always();
+    void Count_ShouldTranslatesToSql_WhenItCalculatesOnRelatedEntity();
+    void Count_ShouldTranslatesToSql_WhenItCalculatesOnRelatedEntityWithWherePredicate();
 }

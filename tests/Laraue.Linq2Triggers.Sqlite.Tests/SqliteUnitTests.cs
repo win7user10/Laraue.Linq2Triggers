@@ -106,4 +106,30 @@ public class SqliteUnitTests : BaseUnitTests, IMemberAssignmentTests
             MemberAssignmentExpressions.SetNewDateTimeOffsetExpression,
             "INSERT INTO \"DestinationEntity\" (\"DateTimeOffsetValue\") SELECT '0001-01-01T00:00:00+00:00';");
     }
+    
+    [Fact]
+    public void Count_ShouldTranslatesToSql_WhenItCalculatesOnRelatedEntity()
+    {
+        AssertSql(
+            MemberAssignmentExpressions.CountRelatedWithPredicateExpression,
+            """
+            INSERT INTO "DestinationEntity" ("IntValue") SELECT (
+              SELECT count(*)
+              FROM "RelatedEntity"
+              INNER JOIN "SourceEntity" ON "RelatedEntity"."SourceEntityId" = "SourceEntity"."Id" AND "RelatedEntity"."SourceEntityId" = NEW."Id" AND "RelatedEntity"."IntValue" > 1);
+            """);
+    }
+
+    [Fact]
+    public void Count_ShouldTranslatesToSql_WhenItCalculatesOnRelatedEntityWithWherePredicate()
+    {
+        AssertSql(
+            MemberAssignmentExpressions.CountRelatedWithWherePredicateExpression,
+            """
+            INSERT INTO "DestinationEntity" ("IntValue") SELECT (
+              SELECT count(*)
+              FROM "RelatedEntity"
+              INNER JOIN "SourceEntity" ON "RelatedEntity"."SourceEntityId" = "SourceEntity"."Id" AND "RelatedEntity"."SourceEntityId" = NEW."Id" AND "RelatedEntity"."IntValue" < 3 AND "RelatedEntity"."IntValue" > 1);
+            """);
+    }
 }

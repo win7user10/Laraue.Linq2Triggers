@@ -110,5 +110,26 @@ namespace Laraue.Linq2Triggers.Tests.Tests
             {
                 DateTimeOffsetValue = new DateTimeOffset()
             };
+        
+        /// <summary>
+        /// IntValue = SELECT count(*) FROM DestinationEntities WHERE DestinationEntities.IntValue > 1
+        /// </summary>
+        public static readonly Expression<Func<NewTableRef<SourceEntity>, DestinationEntity>> CountRelatedWithPredicateExpression =
+            tableRefs => new DestinationEntity
+            {
+                IntValue = tableRefs.New.RelatedEntities.Count(x => x.IntValue > 1)
+            };
+        
+        /// <summary>
+        /// IntValue = SELECT count(*) FROM DestinationEntities WHERE DestinationEntities.IntValue
+        /// more than 1 AND DestinationEntities.IntValue less than 3
+        /// </summary>
+        public static readonly Expression<Func<NewTableRef<SourceEntity>, DestinationEntity>> CountRelatedWithWherePredicateExpression =
+            tableRefs => new DestinationEntity
+            {
+                IntValue = tableRefs.New.RelatedEntities
+                    .Where(x => x.IntValue < 3)
+                    .Count(x => x.IntValue > 1),
+            };
     }
 }
