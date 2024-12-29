@@ -2,7 +2,6 @@
 using Laraue.Linq2Triggers.SqlGeneration;
 using Laraue.Linq2Triggers.Tests.DataAccess;
 using Laraue.Linq2Triggers.TriggerBuilders;
-using Laraue.Linq2Triggers.TriggerBuilders.Actions;
 using Laraue.Linq2Triggers.TriggerBuilders.TableRefs;
 using Laraue.Linq2Triggers.Visitors.TriggerVisitors;
 using Microsoft.Extensions.DependencyInjection;

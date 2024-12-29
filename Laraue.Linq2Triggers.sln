@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.SqlSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.SqlServer.Tests", "tests\Laraue.Linq2Triggers.SqlServer.Tests\Laraue.Linq2Triggers.SqlServer.Tests.csproj", "{47699D43-7F9C-4A3C-84E3-17C08037E7FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Sqlite", "Laraue.Linq2Triggers.Sqlite\Laraue.Linq2Triggers.Sqlite.csproj", "{C88CD8E6-571B-479D-83A6-9F44D8025C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laraue.Linq2Triggers.Sqlite.Tests", "tests\Laraue.Linq2Triggers.Sqlite.Tests\Laraue.Linq2Triggers.Sqlite.Tests.csproj", "{80A8FEA2-2B9A-4333-B4FC-2D7460A61126}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,11 +60,20 @@ Global
 		{47699D43-7F9C-4A3C-84E3-17C08037E7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47699D43-7F9C-4A3C-84E3-17C08037E7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47699D43-7F9C-4A3C-84E3-17C08037E7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88CD8E6-571B-479D-83A6-9F44D8025C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88CD8E6-571B-479D-83A6-9F44D8025C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88CD8E6-571B-479D-83A6-9F44D8025C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88CD8E6-571B-479D-83A6-9F44D8025C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A8FEA2-2B9A-4333-B4FC-2D7460A61126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A8FEA2-2B9A-4333-B4FC-2D7460A61126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A8FEA2-2B9A-4333-B4FC-2D7460A61126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A8FEA2-2B9A-4333-B4FC-2D7460A61126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{02CF5042-0CB1-4B0D-BF8C-9855BFD7A361} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 		{CFE69821-6E31-4DE4-844B-EAED92B949F4} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 		{7DEB5427-9D48-4E07-88F6-E868CEC150A5} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 		{47699D43-7F9C-4A3C-84E3-17C08037E7FD} = {877393BA-73E8-4473-886D-AA3C9445BE64}
+		{80A8FEA2-2B9A-4333-B4FC-2D7460A61126} = {877393BA-73E8-4473-886D-AA3C9445BE64}
 	EndGlobalSection
 EndGlobal
